@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Colour Cube</title>
+<title>Pronunciation</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="../dashboard/css/style.css">
 <link rel="stylesheet" href="css/cube-style.css">
 <link rel="icon" href="../dashboard/img/favicon.ico">
-<body class="w3-pale-green">
+<body>
 
 <!-- Navbar -->
 <div class="w3-top">
@@ -34,30 +34,19 @@
   </div>
 </div>
 
-<header class="w3-center">
-    <h1 class="w3-margin">Colour Cube</h1>
-  </header>
-
-<div class="center">
-    <p>Click on the square following this color sequence</p>
-    <input id="side1" type="checkbox" />
-    <input id="side2" type="checkbox" />
-    <input id="side3" type="checkbox" />
-    <input id="side4" type="checkbox" />
-    <input id="side5" type="checkbox" />
-    <input id="side6" type="checkbox" />
-    <div class="resultado"></div>
-</div>
-  <div class="container">
-    <div class="cube">
-      <label for="side1" class="side side1">CYAN</label>
-      <label for="side2" class="side side2">ORANGE</label>
-      <label for="side3" class="side side3">NAVY BLUE</label>
-      <label for="side4" class="side side4">POWDER BLUE</label>
-      <label for="side5" class="side side5">YELLOW</label>
-      <label for="side6" class="side side6">RED</label>
+<div class="w3-row-padding w3-padding-64 w3-container">
+<div class="w3-content">
+    <div class="w3-twothird">
+        <h1>Speech Practice</h1>
+        <h3 class="w3-padding-16">Try saying <span id = "word"></span></h3>
+        <div class="w3-twothird"><i class="fa fa-microphone" style="font-size:48px; color:#e6b800;" onclick="runSpeechRecognition()"></i><span id = "action"></span>
+            <div id="output"></div>
+        </div>
+        <div class="w3-third w3-center" id="listen"></div>
     </div>
-  </div>
-  <a href="cube.html"><button class="w3-button w3-amber w3-padding-large w3-large" style="margin-top: 70px;">Try Again</button></a>
+</div>
+<div id="video" style="position:relative; left:40px; top:30px;"></div>
+</div>
 </body>
+<script src="speech.js"></script>
 </html>
